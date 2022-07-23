@@ -1,11 +1,11 @@
 {
-  "name": "team",
+  "name": "team-profile-generator",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "dependencies": {
-    "inquirer": "^6.5.2",
+    "inquirer": "^8.2.4",
     "jest": "^28.1.3"
   }
 }

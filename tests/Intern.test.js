@@ -1,4 +1,5 @@
 const Intern = require('../lib/Intern');
+const InternConst = Intern.Intern;
 
 describe("Intern", () => {
     describe("getter method", () =>{
@@ -6,7 +7,7 @@ describe("Intern", () => {
         const id = 20;
         const email = "email@address.com";
         const school = "public school";
-        const intern = new Intern (name, id, email, school);
+        const intern = new InternConst (name, id, email, school);
         it("getName should return the intern's name", () => {
             expect(intern.getName()).toBe(name);
         });

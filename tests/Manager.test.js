@@ -1,4 +1,5 @@
 const Manager = require('../lib/Manager');
+const ManagerConst = Manager.Manager;
 
 describe("Manager", () => {
     describe("getter method", () =>{
@@ -6,7 +7,7 @@ describe("Manager", () => {
         const id = 20;
         const email = "email@address.com";
         const office = 3;
-        const manager = new Manager (name, id, email, office);
+        const manager = new ManagerConst (name, id, email, office);
         it("getName should return the manager's name", () => {
             expect(manager.getName()).toBe(name);
         });

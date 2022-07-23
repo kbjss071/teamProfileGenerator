@@ -1,4 +1,5 @@
 const Engineer = require('../lib/Engineer');
+const EngineerConst = Engineer.Engineer;
 
 describe("Engineer", () => {
     describe("getter method", () =>{
@@ -6,7 +7,7 @@ describe("Engineer", () => {
         const id = 20;
         const email = "email@address.com";
         const username = "GitHub_username";
-        const engineer = new Engineer (name, id, email, username);
+        const engineer = new EngineerConst (name, id, email, username);
         it("getName should return the engineer's name", () => {
             expect(engineer.getName()).toBe(name);
         });
