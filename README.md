@@ -11,3 +11,6 @@
 - When the user decided to finish building their team, the user should be taken to the HTML page which is generated based on the user's inputs.
 
 ## Works done for this project.
+- Created Javascript files to define Employee, Manager, Engineer, and Intern
+- By using the jest library from npm, successfully checked that every getter method worked correctly.
+- By using the inquirer library from npm, prompted user to answer a certain amount of questions to get response.

@@ -1,6 +1,7 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const generateHTML = require("./generateHTML");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -18,14 +19,18 @@ const addMemberQuest = [
 
 function ManagerInfo(){
     inquirer.prompt(Manager.question).then((response)=>{
-        teamMember.push(response);
+        const {name, id, email, officeNumber} = response;
+        let newManager = new Manager.Manager(name, id, email, officeNumber);
+        teamMember.push(newManager);
         isAddMember();
     })
 }
 
 function EngineerInfo(){
     inquirer.prompt(Engineer.question).then((response)=>{
-        teamMember.push(response);
+        const {name, id, email, username} = response;
+        let newEngineer = new Engineer.Engineer(name, id, email, username);
+        teamMember.push(newEngineer);
         isAddMember();
     })
 
@@ -33,7 +38,9 @@ function EngineerInfo(){
 
 function InternInfo(){
     inquirer.prompt(Intern.question).then((response)=>{
-        teamMember.push(response);
+        const {name, id, email, school} = response;
+        let newIntern = new Intern.Intern(name, id, email, school);
+        teamMember.push(newIntern);
         isAddMember();
     })
 }
@@ -48,16 +55,12 @@ function isAddMember(){
                 InternInfo();
                 break;
             case "I don't want to add any more team members":
-                console.log("building a team");
-                console.log(teamMember);
-                generateHTML(teamMember);
+                console.log("building a team...");
+                writeToFile("index.html", generateHTML(teamMember));
         }
     })
 }
 
-function generateHTML(member){
-
-}
 
 // function to write index.html file using the user input
 function writeToFile(filename, data){

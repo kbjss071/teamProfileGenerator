@@ -1,6 +1,4 @@
 
-function generateHTML(team){
-    return `
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,85 +12,51 @@ function generateHTML(team){
 <body>
     <header class="text-center fw-bolder text-light bg-danger bg-opacity-75 p-4"><h1>My Team</h1></header>
     <main class="container row justify-content-md-center col-12">
-    ${generateTeam(team)}
-    </main>
     
-</body>
-</html>
-    `
-}
-
-function generateTeam(team){
-    let html = [];
-
-    for (let i = 0; i < team.length; i++){
-        if (team[i].getRole() == 'Manager'){
-            html.push(ManagerHTML(team[i]));
-        } else if (team[i].getRole() == 'Engineer'){
-            html.push(EngineerHTML(team[i]));
-        } else if (team[i].getRole() == 'Intern'){
-            html.push(InternHTML(team[i]));
-        }
-    }
-    return html.join(" ");
-
-}
-
-function ManagerHTML(manager){
-    return managerHTML = `
     <div class="card border-5 m-3 px-0 shadow" style="width: 18rem;">
             <div class="card-title bg-primary text-light p-3 m-0">
-                <h4>${manager.name}</h4>
+                <h4>Jane Doe</h4>
                 <h5><i class="fas fa-mug-hot"></i> Manager</h5>
             </div>            
             <div class="card-header bg-secondary bg-opacity-25 pb-2">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: ${manager.id}</li>
-                    <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
-                    <li class="list-group-item">Office Number: ${manager.office}</li>
+                    <li class="list-group-item">ID: 1</li>
+                    <li class="list-group-item">Email: <a href="mailto:manager@gmail.com">manager@gmail.com</a></li>
+                    <li class="list-group-item">Office Number: 1</li>
                 </ul>
             </div>            
         </div>
-    `;
-
-}
-
-
-
-function EngineerHTML(engineer){
-    return engineerHTML = `
+     
     <div class="card border-5 m-3 px-0 shadow" style="width: 18rem;">
             <div class="card-title bg-primary text-light p-3 m-0">
-                <h4>${engineer.name}</h4>
+                <h4>Jin Kang</h4>
                 <h5><i class="fa-solid fa-glasses"></i> Engineer</h5>
             </div>            
             <div class="card-header bg-secondary bg-opacity-25 pb-2">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: ${engineer.id}</li>
-                    <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
-                    <li class="list-group-item">Github: <a href="https://github.com/${engineer.username}" target="_blank">${engineer.username}</a></li>
+                    <li class="list-group-item">ID: 2</li>
+                    <li class="list-group-item">Email: <a href="mailto:kbjss071@gmail.com">kbjss071@gmail.com</a></li>
+                    <li class="list-group-item">Github: <a href="https://github.com/kbjss071" target="_blank">kbjss071</a></li>
                 </ul>
             </div>            
         </div>
-    `;
-}
-
-function InternHTML(intern){
-    return internHTML = `
+     
     <div class="card border-5 m-3 px-0 shadow" style="width: 18rem;">
             <div class="card-title bg-primary text-light p-3 m-0">
-                <h4>${intern.name}</h4>
+                <h4>John Doe</h4>
                 <h5><i class="fa-solid fa-graduation-cap"></i> Intern</h5>
             </div>            
             <div class="card-header bg-secondary bg-opacity-25 pb-2">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: ${intern.id}</li>
-                    <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
-                    <li class="list-group-item">School: ${intern.school}</li>
+                    <li class="list-group-item">ID: 3</li>
+                    <li class="list-group-item">Email: <a href="mailto:intern@gmail.com">intern@gmail.com</a></li>
+                    <li class="list-group-item">School: GT</li>
                 </ul>
             </div>            
         </div>
-    `;
-}
-
-module.exports = generateHTML;
+    
+    </main>
+    
+</body>
+</html>
+    
