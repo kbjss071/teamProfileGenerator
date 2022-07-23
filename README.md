@@ -1,4 +1,6 @@
 # teamProfileGenerator
+Walkthrough Video: https://drive.google.com/file/d/1a9nu0syRons9O5r39wJ_kg_1FV4KImik/view?usp=sharing
+![Screenshot of the generated HTML](./dist/images/Capture.PNG)
 
 ## To-do List
 - When a user is prompted for team members and their information, an HTML file is generated that displays a nicely formatted team roster based on the user input.
@@ -14,3 +16,6 @@
 - Created Javascript files to define Employee, Manager, Engineer, and Intern
 - By using the jest library from npm, successfully checked that every getter method worked correctly.
 - By using the inquirer library from npm, prompted user to answer a certain amount of questions to get response.
+- Created prompts for each job title and used user responses to create Manager, Engineer and Intern objects.
+- When user doesn't want to add any more members in their team, the app will automatically produces index.html file with the user responses.
+- Recorded a walkthrough video to show how the app works.
